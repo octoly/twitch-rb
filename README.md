@@ -1,8 +1,6 @@
-# Twitch API 0.1.1
+# Twitch API
 
 This gem simplifies the Twitch-API for ruby users.
-
-http://lak.in // http://twitter.com/dustinlakin
 
 
 ## Install
@@ -144,12 +142,12 @@ returns:
 
 ```ruby
 # Requires access_token (and special scope for channel editing)
-#   edit_channel(status, game)
+#   edit_channel(channelname, status, game)
 #   arguments:
 #    status (string)
 #    game (string)
 
-@twitch.edit_channel "Ranked Solo Queue", "League of Legends"
+@twitch.edit_channel "ChannelName", "Ranked Solo Queue", "League of Legends"
 ```
 
 ----
