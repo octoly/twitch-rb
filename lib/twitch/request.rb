@@ -10,27 +10,28 @@ module Twitch
 
     def get(url)
       @adapter.get(url, :headers => {
+        'Accept' => 'application/vnd.twitchtv.v5+json',
         'Client-ID' => @client_id
       })
     end
 
     def post(url, data)
       @adapter.post(url, :body => data, :headers => {
+        'Accept' => 'application/vnd.twitchtv.v5+json',
         'Client-ID' => @client_id
       })
     end
 
     def put(url, data={})
       @adapter.put(url, :body => data, :headers => {
-        'Accept' => 'application/json',
-        'Content-Type' => 'application/json',
-        'Api-Version' => '2.2',
+        'Accept' => 'application/vnd.twitchtv.v5+json',
         'Client-ID' => @client_id
       })
     end
 
     def delete(url)
       @adapter.delete(url, :headers => {
+        'Accept' => 'application/vnd.twitchtv.v5+json',
         'Client-ID' => @client_id
       })
     end
